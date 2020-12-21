@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Info from "./components/info";
+import Start from "./components/start";
+import Form from "./components/form";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+
+    state = {
+        isStarted: false
+    }
+
+    setStartedTrue = async () => {
+        this.setState({
+            isStarted: true
+        })
+    }
+
+    render() {
+        return (
+            <div>
+                { !this.state.isStarted &&
+                    <div>
+                        <div><Info/></div>
+                        <div><Start setStartedTrue={this.setStartedTrue}/></div>
+                    </div>
+                }
+            </div>
+        )
+    }
 }
 
 export default App;
