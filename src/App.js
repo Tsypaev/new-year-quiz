@@ -9,7 +9,7 @@ class App extends React.Component {
         isStarted: false,
         question1 : {
             active: false,
-            question: 'Вопрос',
+            question: 'Вопрос1',
             answer1: 'Ответ1',
             answer2: 'Ответ2',
             answer3: 'Ответ3',
@@ -17,7 +17,7 @@ class App extends React.Component {
         },
         question2 : {
             active: false,
-            question: 'Вопрос',
+            question: 'Вопрос2',
             answer1: 'Ответ1',
             answer2: 'Ответ2',
             answer3: 'Ответ3',
@@ -25,7 +25,7 @@ class App extends React.Component {
         },
         question3 : {
             active: false,
-            question: 'Вопрос',
+            question: 'Вопрос3',
             answer1: 'Ответ1',
             answer2: 'Ответ2',
             answer3: 'Ответ3',
@@ -33,7 +33,7 @@ class App extends React.Component {
         },
         question4 : {
             active: false,
-            question: 'Вопрос',
+            question: 'Вопрос4',
             answer1: 'Ответ1',
             answer2: 'Ответ2',
             answer3: 'Ответ3',
@@ -41,7 +41,7 @@ class App extends React.Component {
         },
         question5 : {
             active: false,
-            question: 'Вопрос',
+            question: 'Вопрос5',
             answer1: 'Ответ1',
             answer2: 'Ответ2',
             answer3: 'Ответ3',
@@ -49,7 +49,7 @@ class App extends React.Component {
         },
         question6 : {
             active: false,
-            question: 'Вопрос',
+            question: 'Вопрос6',
             answer1: 'Ответ1',
             answer2: 'Ответ2',
             answer3: 'Ответ3',
@@ -57,7 +57,7 @@ class App extends React.Component {
         },
         question7 : {
             active: false,
-            question: 'Вопрос',
+            question: 'Вопрос7',
             answer1: 'Ответ1',
             answer2: 'Ответ2',
             answer3: 'Ответ3',
@@ -65,7 +65,7 @@ class App extends React.Component {
         },
         question8 : {
             active: false,
-            question: 'Вопрос',
+            question: 'Вопрос8',
             answer1: 'Ответ1',
             answer2: 'Ответ2',
             answer3: 'Ответ3',
@@ -73,7 +73,7 @@ class App extends React.Component {
         },
         question9 : {
             active: false,
-            question: 'Вопрос',
+            question: 'Вопрос9',
             answer1: 'Ответ1',
             answer2: 'Ответ2',
             answer3: 'Ответ3',
@@ -81,7 +81,7 @@ class App extends React.Component {
         },
         question10 : {
             active: false,
-            question: 'Вопрос',
+            question: 'Вопрос10',
             answer1: 'Ответ1',
             answer2: 'Ответ2',
             answer3: 'Ответ3',
@@ -114,6 +114,9 @@ class App extends React.Component {
                 }
                 { this.state.question1.active &&
                     <div><Question question={this.state.question1}/></div>
+                }
+                { this.state.question2.active &&
+                <div><Question question={this.state.question2}/></div>
                 }
             </div>
         )

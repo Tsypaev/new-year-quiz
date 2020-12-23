@@ -1,25 +1,41 @@
 import React from "react";
 import Next from "./next";
 
-const Question = (props) => (
-    <div>
-        <p>{props.question.question}</p>
+class Question extends React.Component {
+
+    setNextQuestion = async () => {
+       this.setState({
+            question1: {
+                active: false
+            },
+            question2: {
+                active: true
+            }
+        })
+    }
+
+    render() {
+        return (
             <div>
-                    <button>{props.question.answer1}</button>
+                <p>{this.props.question.question}</p>
+                <div>
+                    <button>{this.props.question.answer1}</button>
+                </div>
+                <div>
+                    <button>{this.props.question.answer2}</button>
+                </div>
+                <div>
+                    <button>{this.props.question.answer3}</button>
+                </div>
+                <div>
+                    <button>{this.props.question.answer4}</button>
+                </div>
+                <div>
+                    <Next setNextQuestion={this.setNextQuestion}/>
+                </div>
             </div>
-            <div>
-                    <button>{props.question.answer2}</button>
-            </div>
-            <div>
-                    <button>{props.question.answer3}</button>
-            </div>
-            <div>
-                    <button>{props.question.answer4}</button>
-            </div>
-            <div>
-                    <Next/>
-            </div>
-    </div>
-)
+        )
+    }
+}
 
 export default Question;
